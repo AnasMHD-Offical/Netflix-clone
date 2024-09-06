@@ -24,7 +24,7 @@ function Card({ title , fetchUrl , IsLargeRow }) {
           <img
             className={  IsLargeRow ? Style.Row_poster_container : Style.Row_posterLarge }
             key={movie.id}
-            src={`${base_url}${IsLargeRow ? movie.poster_path : movie.backdrop_path}`}
+            src={`${base_url}${IsLargeRow ? movie?.poster_path : movie?.backdrop_path}`}
             alt={movie.name || movie.title}
           />
         ))}
