@@ -37,6 +37,9 @@ function Hero() {
           </div>
           <h3 className={Style.Hero_description}>{movie.overview}</h3>
         </div>
+        <div className={Style.Hero_fadeBottom}>
+
+        </div>
       </header>
     </>
   );

@@ -25,7 +25,7 @@
 }
 .Row_posterLarge{
     object-fit: contain;
-    max-width: 220px;
+    max-width: 280px;
     margin-right: 10px;
     transition: transform 450ms;
 }

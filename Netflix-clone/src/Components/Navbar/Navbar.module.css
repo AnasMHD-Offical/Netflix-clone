@@ -1,0 +1,32 @@
+.Navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-height: 6em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem 2rem ;
+    background-color: transparent;
+    z-index: 999;
+    transition: all .2s;
+}
+.Logo{
+    max-width: 120px;
+    object-fit: contain;
+}
+.avatar{
+    max-width: 40px;
+}
+.nav_list{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav_link{
+    cursor: pointer;
+    transition: all .2s;
+}
+.nav_link:hover{
+    color: #afaeae;
+}

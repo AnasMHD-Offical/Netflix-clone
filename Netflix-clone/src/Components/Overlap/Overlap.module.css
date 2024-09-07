@@ -1,0 +1,87 @@
+.Overlap{
+    position: absolute;
+    top: 2;
+    margin-left: 10px;
+    background-color: #141414;
+    max-width: 357px;
+    max-height: 390px;
+    display: flex;
+    flex-direction: column;
+    color: #acacac;
+    border-radius: .3rem;
+    /* margin: 2rem; */
+    border: 1px solid;
+    z-index: 1;
+    transition: all .4s;
+}
+.Overlap_yt_play{
+    object-fit: contain;
+    max-width: 357px;
+    max-height: 206px;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+
+}
+.Overlap_content{
+    max-width: 347px;
+    height: 115px;
+    display: flex;
+    gap: .4rem;
+    flex-direction: column;
+
+
+}
+.Overlap_content_btn_container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+.Overlap_content_btn{
+    font-size: 1.5rem;
+    padding:  .3rem .6rem;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #acacac;
+    background-color: #141414;
+    color: #acacac;
+    margin-left: 10px;
+    margin-top: 08px;
+}
+.Overlap_content_movie_desc{
+    display: flex;
+    margin-left: .8rem;
+    align-items: center;
+    gap: .6rem;
+}   
+.Overlap_content_movie_certify{
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .2rem .3rem;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #acacac;
+    color: #acacac;
+    border-radius: .2rem;
+
+}
+.Overlap_content_movie_length{
+    margin-left: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #acacac;
+}
+.Overlap_content_movie_quality{
+    padding: .1rem .2rem;
+    font-size: .9rem;
+    background-color: transparent;
+    border: 1px solid #acacac;
+    color: #acacac;
+    border-radius: .2rem;
+}
+.Overlap_content_gener{
+    font-size: .9rem;
+    font-weight: 600;
+    padding-left: 14px;
+    color: #acacac;
+}
