@@ -1,0 +1,53 @@
+.add-items {
+    width: 258px;
+    height: 256px;
+    border: 1px solid;
+    padding: .3rem;
+
+}
+.placeholder {
+  background: #ccc;
+  animation: placeholder 1s infinite linear;
+}
+.poster-placeholder {
+    object-fit: contain;
+    height: 164px;
+    transition: all 0.2s linear 0s;
+}
+.title-placeholder {
+    transition: all 0.2s linear 0s;
+    height: 26px;
+    width: 70%;
+    margin: 6px 2px;
+}
+.tagline-placeholder {
+    transition: all 0.2s linear 0s;
+    height: 22px;
+    width: 90%;
+    margin: 6px 2px;
+}
+.footr {
+    transition: all 0.2s linear 0s;
+    height: 18px;
+    width: 100%;
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+    margin-top: 8px;
+}
+.location-placeholder {
+    transition: all 0.2s linear 0s;
+    width: 60%;
+    height: 18px;
+    margin: 8px 2px;
+}
+.stamp-placeholder {
+    width: 35%;
+    height: 18px;
+}
+@keyframes placeholder {
+  50% {
+    opacity: 0.8;
+  }
+
+}

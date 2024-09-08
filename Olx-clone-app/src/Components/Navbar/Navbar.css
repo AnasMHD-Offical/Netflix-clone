@@ -1,0 +1,161 @@
+/* Navbar main div style */
+.navbar {
+  display: flex;
+  padding: 0.8rem;
+  gap: 1.5rem;
+  background-color: #f8f9fa;
+  align-items: center;
+}
+/* Navbar Logo image style */
+.navbar-logo img {
+  object-fit: contain;
+  max-width: 120px;
+  height: 26px;
+}
+/* Navbar location input style */
+.location {
+  display: flex;
+  align-items: center;
+  /* padding: .3rem; */
+  border: 2px solid;
+  border-radius: 0.3rem;
+}
+.location-search {
+  /* border: 1px solid; */
+  font-size: 1.3rem;
+  padding: 0.5rem 0.7rem 0.4rem 0.5rem;
+  background-color: #fff;
+}
+.location-input {
+  height: 43px;
+  width: 190px;
+  font-size: 1rem;
+  border: none;
+}
+.location-input:focus {
+  outline: none;
+}
+.location-btn {
+  font-size: 2.09rem;
+  background-color: #fff;
+  border: none;
+  padding-right: 0.6rem;
+  padding-top: 0.5rem;
+  border-radius: 0.3rem;
+}
+/* Navbar Search product input style */
+.Product {
+  display: flex;
+  align-items: center;
+  /* padding: .3rem; */
+  border: 2px solid;
+  border-radius: 0.3rem;
+}
+.product-btn {
+  font-size: 2rem;
+  background-color: #002f34;
+  color: #f8f9fa;
+  border: none;
+  padding: 0.45rem 0.4rem 0.1rem 0.6rem;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+}
+.product-input {
+  height: 43px;
+  width: 790px;
+  font-size: 1rem;
+  border: none;
+}
+.product-input:focus {
+  outline: none;
+}
+.product-input::placeholder {
+  padding-left: 10px;
+}
+/* Navbar sell button style */
+.action {
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.Lang{
+    width: 60px;
+    height: 30px;
+    border: none;
+    background-color: #f8f9fa;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #002f34;
+
+    cursor: pointer;
+}
+.login {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #002f34;
+}
+.Sell {
+  background-image: url("http://localhost:5173/src/Components/Navbar/assets/sellBg.png");
+  background-position: center;
+  background-size: cover;
+  padding: -.1rem;
+  width: 100px;
+  height: 48px;
+  /* background-color: #002f34; */
+  border-radius: 1.9rem;
+  box-shadow: 0px 0px 3px #002f34;
+}
+.Sell-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-size: 1.4rem;
+  font-weight: 800;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  /* background-color: #f8f9fa; */
+  border-radius: 1.4rem;
+}
+.Sell-btn-text {
+  font-size: 1rem;
+}
+.category{
+    /* border: 1px solid; */
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa;
+    margin-top: 2px;
+}
+.All-categery{
+    display: flex;
+    padding: .2rem;
+    gap: .4rem;
+}
+.all-link{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #002f34;
+}
+.all-btn{
+    font-size: 1.3rem;
+    font-weight:900;
+    /* padding: .1rem .2rem; */
+    background: transparent;
+    border: none;
+}
+.Nav-list{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: 22px;
+    list-style: none;
+}
+.Nav-link{
+    text-decoration: none;
+    color: #002f34;
+
+}

@@ -1,0 +1,38 @@
+.home-page{
+    color: black;
+}
+.Add-items-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .7rem;
+    margin: 4rem 7rem 0rem 7rem;
+    /* background-color: antiquewhite; */
+    padding: 3rem;
+}
+.products-display-container{
+    display: flex;
+    flex-direction: column;
+}
+.More{
+    margin: 1rem 17rem;
+    /* padding: 3rem; */
+    width: 65%;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: center;
+}
+.More-btn{
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .7rem;
+    border: 2px solid;
+    border-radius: .2rem;
+    background-color: transparent;
+    transition: all .5s ease;
+    cursor: pointer;
+}
+.More-btn:hover{
+    transition: all .5s ease;
+    transform: scale(1.09);
+}
