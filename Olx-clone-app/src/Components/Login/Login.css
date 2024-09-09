@@ -7,7 +7,7 @@
 .Login-container{
     border: 1px solid black;
     width: 400px;
-    height: 350px;
+    height: 390px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,6 +35,7 @@
     border-radius: .3rem;
     border: 1px solid;
     font-size: 1rem;
+    padding-left: 1rem;
 
 }
 .Login-email::placeholder{
@@ -46,6 +47,7 @@
     border-radius: .3rem;
     border: 1px solid;
     font-size: 1rem;
+    padding-left: 1rem;
 }
 .Login-password::placeholder{
     padding: 10px;
@@ -79,4 +81,9 @@
 }
 .backtohome:hover{
     border: 1px solid #002f34;
+}
+.login-error{
+    text-align: center;
+    color: red;
+    font-size: 1rem;
 }

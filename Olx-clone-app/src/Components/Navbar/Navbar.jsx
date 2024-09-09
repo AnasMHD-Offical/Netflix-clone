@@ -1,9 +1,15 @@
-import React , {useState } from "react";
+import React , {useState , useContext, useEffect} from "react";
 import {Link, useNavigate} from "react-router-dom"
 import "./Navbar.css";
+import { Context } from "../Login/Login";
+import {signOut} from "firebase/auth"
+import {auth} from "../../Firebase"
+
 // import sellBg from "./assets/SellBg.jsx"
 function Navbar() {
+  const isUserExist = useContext(Context)
   const [Login,setLogin] = useState("Login")
+  const [logedIn,setLogedIn] = useState(true)
   const navigate = useNavigate()
   // const [sell,setSell] = useState(true)
     const nav = [
@@ -18,6 +24,21 @@ function Navbar() {
     // function handleSell(){
     //   setSell(false)
     // } 
+
+    useEffect(()=>{
+      if(isUserExist){
+        setLogedIn(false)
+      }
+    },[])
+
+    async function handleLogout(){
+        try {
+          await signOut(auth)
+          navigate("/")
+        } catch (error) {
+          console.log(error.message);
+        }
+    }
   return (
     <>
       <div className="navbar">
@@ -61,9 +82,7 @@ function Navbar() {
                 <option value="Hindi">HIN</option>
                 <option value="Malayalam">MAL</option>
             </select>
-          <Link to="/login" className="login">
-            {Login}
-          </Link>
+          { logedIn ? <Link to="/login" className="login">{Login}</Link> : <button onClick={handleLogout}>Logout</button> }
           <div className="Sell">
             <button className="Sell-btn" onClick={()=>navigate("/sellitems")}>
                 <i class="bx bx-plus"></i> 

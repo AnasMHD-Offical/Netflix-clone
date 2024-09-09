@@ -1,89 +1,106 @@
-.Signup-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
+.Signup-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 }
-.Signup-container{
-    border: 1px solid black;
-    width: 400px;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem .5rem;
-    margin-top: 2rem;
-    border-radius: 1rem;
+.Signup-container {
+  border: 1px solid black;
+  width: 400px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0.5rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
 }
-.Signup-Header{
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    color: #002f34;
+.Signup-Header {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #002f34;
 }
-.Signup-olx-logo img{
-    object-fit: contain;
+.Signup-olx-logo img {
+  object-fit: contain;
 }
-.Signup-form{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.Signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.Signup-email{
-    width: 300px;
-    height: 60px;
-    border-radius: .3rem;
-    border: 1px solid;
-    font-size: 1rem;
-
+.Signup-email {
+  width: 300px;
+  height: 60px;
+  border-radius: 0.3rem;
+  border: 1px solid;
+  font-size: 1rem;
+  padding-left: 1rem;
 }
-.Signup-email::placeholder{
-    padding: 10px;
+.Signup-email::placeholder {
+  padding: 10px;
 }
-.Signup-password{
-    width: 300px;
-    height: 60px;
-    border-radius: .3rem;
-    border: 1px solid;
-    font-size: 1rem;
+.Signup-name {
+  width: 300px;
+  height: 60px;
+  border-radius: 0.3rem;
+  border: 1px solid;
+  font-size: 1rem;
+  padding-left: 1rem;
 }
-.Signup-password::placeholder{
-    padding: 10px;
+.Signup-name::placeholder {
+  padding: 10px;
 }
-.Signup-submit{
-    width: 100%;
-    height: 20%;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    border-radius: .3rem;
-    font-weight: 700;
-    background-color: #002f34;
-    color: #f8f9fa;
+.Signup-password {
+  width: 300px;
+  height: 60px;
+  border-radius: 0.3rem;
+  border: 1px solid;
+  font-size: 1rem;
+  padding-left: 1rem;
 }
-.Go-Sumbit{
-    text-decoration: none;
-    color: #002f34;
-    font-size: 1rem;
-    text-align: center;
-    font-weight: 500;
+.Signup-password::placeholder {
+  padding: 10px;
 }
-.Go-login{
-    color: #002f34;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 800;
-    filter: drop-shadow(0px 0px .5px #ccc);
+.Signup-submit {
+  width: 100%;
+  height: 20%;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
+  font-weight: 700;
+  background-color: #002f34;
+  color: #f8f9fa;
 }
-.backtohome{
-    margin-top: 20px;
-    font-size: 1rem;
-    background: #fff;
-    color: #002f34;
-    padding: .4rem;
-    border: none;
-    border-radius: .3rem;
-    cursor: pointer;
+.Go-Sumbit {
+  text-decoration: none;
+  color: #002f34;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
 }
-.backtohome:hover{
-    border: 1px solid #002f34;
+.Go-login {
+  color: #002f34;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 800;
+  filter: drop-shadow(0px 0px 0.5px #ccc);
+}
+.backtohome {
+  margin-top: 20px;
+  font-size: 1rem;
+  background: #fff;
+  color: #002f34;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+.backtohome:hover {
+  border: 1px solid #002f34;
+}
+.signup-error {
+  color: red;
+  font-size: 0.84rem;
+  text-align: center;
 }
