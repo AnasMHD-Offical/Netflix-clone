@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import "./Home.css";
 import AddItems from "../../Components/Add item/AddItems";
+import Ads from "../../Components/OLX ads/ads";
+import Footer from "../../Components/Footer/Footer";
 function Home() {
   const [list, setList] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,7 +27,8 @@ function Home() {
                 <button className="More-btn">Load more</button>
             </div>
         </div>
-        
+        <Ads/>
+        <Footer/>
       </div>
     </>
   );

@@ -1,9 +1,10 @@
 .add-items {
     width: 258px;
     height: 256px;
-    border: 1px solid;
+    /* border: 1px solid; */
     padding: .3rem;
-
+    border-radius: .3rem;
+    box-shadow: 0px 0px 2px ;
 }
 .placeholder {
   background: #ccc;
@@ -13,6 +14,7 @@
     object-fit: contain;
     height: 164px;
     transition: all 0.2s linear 0s;
+    border-radius: .3rem;
 }
 .title-placeholder {
     transition: all 0.2s linear 0s;

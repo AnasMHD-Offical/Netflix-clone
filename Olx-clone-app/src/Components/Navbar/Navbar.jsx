@@ -1,8 +1,11 @@
-import React from "react";
-import {Link} from "react-router-dom"
+import React , {useState } from "react";
+import {Link, useNavigate} from "react-router-dom"
 import "./Navbar.css";
 // import sellBg from "./assets/SellBg.jsx"
 function Navbar() {
+  const [Login,setLogin] = useState("Login")
+  const navigate = useNavigate()
+  // const [sell,setSell] = useState(true)
     const nav = [
         {id:0, label : "Cars"},
         {id:1, label : "Motorcycles"},
@@ -12,6 +15,9 @@ function Navbar() {
         {id:5, label : "Commercial & other Vehicles"},
         {id:6, label : "For Rent: Houses & Apartments"},
     ]
+    // function handleSell(){
+    //   setSell(false)
+    // } 
   return (
     <>
       <div className="navbar">
@@ -55,14 +61,14 @@ function Navbar() {
                 <option value="Hindi">HIN</option>
                 <option value="Malayalam">MAL</option>
             </select>
-          <Link to="/account/login" className="login">
-            Login
+          <Link to="/login" className="login">
+            {Login}
           </Link>
           <div className="Sell">
-            <div className="Sell-btn">
+            <button className="Sell-btn" onClick={()=>navigate("/sellitems")}>
                 <i class="bx bx-plus"></i> 
                 <h2 className="Sell-btn-text">SELL</h2>
-            </div>
+            </button>
           </div>
         </div>
       </div>

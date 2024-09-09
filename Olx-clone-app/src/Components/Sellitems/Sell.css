@@ -1,0 +1,139 @@
+.Sell-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Sell-container{
+    border: 1px solid black;
+    width: 400px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem .5rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+}
+.Sell-Header{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #002f34;
+}
+.Sell-olx-logo img{
+    object-fit: contain;
+}
+.Sell-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Sell-name{
+    width: 300px;
+    height: 60px;
+    border-radius: .3rem;
+    border: 1px solid;
+    font-size: 1rem;
+
+}
+.Sell-name::placeholder{
+    padding: 10px;
+}
+.Sell-category{
+    width: 300px;
+    height: 60px;
+    border-radius: .3rem;
+    border: 1px solid;
+    font-size: 1rem;
+
+}
+.Sell-category::placeholder{
+    padding: 10px;
+}
+.Sell-price{
+    width: 300px;
+    height: 60px;
+    border-radius: .3rem;
+    border: 1px solid;
+    font-size: 1rem;
+}
+.Sell-price::placeholder{
+    padding: 10px;
+}
+.Sell-img{
+    background-color: #ccc;
+}
+.Sell-submit{
+    width: 100%;
+    height: 20%;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    border-radius: .3rem;
+    font-weight: 700;
+    background-color: #002f34;
+    color: #f8f9fa;
+}
+.Go-Sumbit{
+    text-decoration: none;
+    color: #002f34;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+.Go-login{
+    color: #002f34;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 800;
+    filter: drop-shadow(0px 0px .5px #ccc);
+}
+.file {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    height: 2.5rem;
+  }
+  .file input {
+    min-width: 14rem;
+    margin: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+  }
+  .file-custom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 1.8rem;
+    padding: .5rem 1rem;
+    line-height: 1.5;
+    color: #555;
+    background-color: #fff;
+    border: .075rem solid #ddd;
+    border-radius: .25rem;
+    box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .file-custom:after {
+    content: "Choose file...";
+  }
+  .file-custom:before {
+    position: absolute;
+    top: -.075rem;
+    right: -.075rem;
+    bottom: -.075rem;
+    z-index: 6;
+    display: block;
+    content: "Browse";
+    height: 1.8rem;
+    padding: .5rem 1rem;
+    line-height: 1.7;
+    color: #f8f9fa;
+    background-color: #002f34;
+    border: .075rem solid #ddd;
+    border-radius: 0 .25rem .25rem 0;
+  }
