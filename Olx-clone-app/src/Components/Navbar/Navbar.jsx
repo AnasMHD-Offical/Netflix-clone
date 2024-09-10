@@ -1,15 +1,14 @@
-import React , {useState , useContext, useEffect} from "react";
+import React , {useState , useEffect} from "react";
 import {Link, useNavigate} from "react-router-dom"
 import "./Navbar.css";
-import { Context } from "../Login/Login";
-import {signOut} from "firebase/auth"
+import {onAuthStateChanged, signOut} from "firebase/auth"
 import {auth} from "../../Firebase"
 
 // import sellBg from "./assets/SellBg.jsx"
 function Navbar() {
-  const isUserExist = useContext(Context)
-  const [Login,setLogin] = useState("Login")
-  const [logedIn,setLogedIn] = useState(true)
+  // const [Login,setLogin] = useState("Login")
+  const [logedIn,setLogedIn] = useState(null)
+  const [user,setUser] = useState("User")
   const navigate = useNavigate()
   // const [sell,setSell] = useState(true)
     const nav = [
@@ -26,19 +25,32 @@ function Navbar() {
     // } 
 
     useEffect(()=>{
-      if(isUserExist){
-        setLogedIn(false)
-      }
-    },[])
+        const CheckLogedin = onAuthStateChanged(auth,(currentUser)=>{
+            if(currentUser){
+                setLogedIn(currentUser)
+                setUser(currentUser.email)
+            }else{
+                setLogedIn(null)
+            }
+        })
 
-    async function handleLogout(){
+        if(!CheckLogedin){
+            navigate('/login')
+        }
+
+        return () => CheckLogedin()
+    })
+    
+    const handleLogout = async () =>{
         try {
           await signOut(auth)
-          navigate("/")
+          navigate("/login")
         } catch (error) {
           console.log(error.message);
         }
     }
+    // console.log(user);
+    
   return (
     <>
       <div className="navbar">
@@ -82,7 +94,7 @@ function Navbar() {
                 <option value="Hindi">HIN</option>
                 <option value="Malayalam">MAL</option>
             </select>
-          { logedIn ? <Link to="/login" className="login">{Login}</Link> : <button onClick={handleLogout}>Logout</button> }
+          { logedIn ? <button className="logout-btn" onClick={handleLogout}>Logout</button> : <Link to="/login" className="login">Login</Link>  }
           <div className="Sell">
             <button className="Sell-btn" onClick={()=>navigate("/sellitems")}>
                 <i class="bx bx-plus"></i> 
@@ -101,6 +113,7 @@ function Navbar() {
                     <li  key={list.id}><Link to={`/browser/${list.id}`} className="Nav-link">{list.label}</Link></li>
                 ))}
             </ul>
+            <p className="user-display">Hello, {user}</p>
       </div>
 
     </>

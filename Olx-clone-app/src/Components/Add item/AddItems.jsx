@@ -1,17 +1,27 @@
-import React ,{useState} from 'react'
+import React ,{useEffect, useState} from 'react'
 import "./AddItems.css"
-function AddItems(props){
-    
-    if("placeholder" in props){
+function AddItems({productName,category,imageUrl,price,placeholder,location}){
+    const [loding,setloding] =useState(false)
+    const [classdefine,setClassdefine] =useState("")
+    useEffect(()=>{
+        if(placeholder){
+            setClassdefine("placeholder")
+        }else{
+            setClassdefine(null)
+        }
+    },[placeholder])
+    if("placeholder"){
         return (
             <>
               <div className="add-items">
-                  <div className='poster-placeholder placeholder'></div>
-                  <div className='title-placeholder placeholder'></div>
-                  <div className='tagline-placeholder placeholder'></div>
+                  <div className={`poster-placeholder ${classdefine}`}>
+                    <img src={imageUrl} alt="" />
+                  </div>
+                  <div className={`price-placeholder ${classdefine}`}>$ {price}</div>
+                  <div className={`product-placeholder ${classdefine}`}>{productName}</div>
                   <div className='footr '>
-                      <div className="location-placeholder placeholder"></div>
-                      <div className="stamp-placeholder placeholder"></div>
+                      <div className={`location-placeholder ${classdefine}`}>{location}</div>
+                      <div className={`category-placeholder ${classdefine}`}>{category}</div>
                   </div>
               </div>
             </>

@@ -26,9 +26,16 @@ function Signup() {
           console.log("User signup with firestore data");
           navigate("/")
         } catch (error) {
-          if(error.code === 'auth/email-already-in-use')
+          if(error.code === 'auth/email-already-in-use'){
             setError("The user already exist . Please Login or try another one")
             console.log(error.message); 
+          }else if(error.code === "auth/weak-password"){
+            setError("Password should be at least 6 characters.")
+            console.log(error.message); 
+          }else{
+            console.log(error.message); 
+          }
+          console.log(error.code); 
         }
 
         

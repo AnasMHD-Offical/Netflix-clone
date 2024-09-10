@@ -130,6 +130,7 @@
     justify-content: center;
     background-color: #f8f9fa;
     margin-top: 2px;
+    align-items: center;
 }
 .All-categery{
     display: flex;
@@ -160,4 +161,20 @@
     text-decoration: none;
     color: #002f34;
 
+}
+.logout-btn{
+  /* padding: .5rem; */
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  color: #002f34;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.user-display{
+  margin-left: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #002f34;
 }
