@@ -8,7 +8,7 @@ import {auth} from "../../Firebase"
 function Navbar() {
   // const [Login,setLogin] = useState("Login")
   const [logedIn,setLogedIn] = useState(null)
-  const [user,setUser] = useState("User")
+  const [user,setUser] = useState(null)
   const navigate = useNavigate()
   // const [sell,setSell] = useState(true)
     const nav = [
@@ -23,7 +23,7 @@ function Navbar() {
     // function handleSell(){
     //   setSell(false)
     // } 
-
+   
     useEffect(()=>{
         const CheckLogedin = onAuthStateChanged(auth,(currentUser)=>{
             if(currentUser){
@@ -40,7 +40,14 @@ function Navbar() {
 
         return () => CheckLogedin()
     })
-    
+    function handleSell(){
+       if(user){
+        navigate("/sellitems")
+       }else{
+        navigate("/login")
+       }
+    }
+
     const handleLogout = async () =>{
         try {
           await signOut(auth)
@@ -96,7 +103,7 @@ function Navbar() {
             </select>
           { logedIn ? <button className="logout-btn" onClick={handleLogout}>Logout</button> : <Link to="/login" className="login">Login</Link>  }
           <div className="Sell">
-            <button className="Sell-btn" onClick={()=>navigate("/sellitems")}>
+            <button className="Sell-btn" onClick={handleSell}>
                 <i class="bx bx-plus"></i> 
                 <h2 className="Sell-btn-text">SELL</h2>
             </button>
@@ -105,15 +112,15 @@ function Navbar() {
       </div>
       <div className="category">
             <div className="All-categery">
-                <Link to="/All" className="all-link">All category</Link>
+                <Link to="/" className="all-link">All category</Link>
                 <button className="all-btn"><i class='bx bx-chevron-down'></i></button>
             </div>
             <ul className="Nav-list">
                 {nav.map((list)=>(
-                    <li  key={list.id}><Link to={`/browser/${list.id}`} className="Nav-link">{list.label}</Link></li>
+                    <li  key={list.id}><Link to={`/`} className="Nav-link">{list.label}</Link></li>
                 ))}
             </ul>
-            <p className="user-display">Hello, {user}</p>
+            <p className="user-display">Hello {user}</p>
       </div>
 
     </>

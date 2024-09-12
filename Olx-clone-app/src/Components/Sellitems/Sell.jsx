@@ -30,13 +30,12 @@ function Sell() {
       setImageUrl(downloadURL);
 
       //add listing details along with image URL to firestore
-      //add listing details along with image URL to firestore
         await addDoc(collection(db, "sell_items"), {
             productName: productName,
             category: category,
             price: price,
             location: location,
-            imageUrl: downloadURL, // Use downloadURL directly here
+            imageUrl: downloadURL, 
           });
   
 
@@ -97,11 +96,11 @@ function Sell() {
               <span class="file-custom"></span>
             </label>
             <button className="Sell-submit">Sell Item</button>
-            <p className='Go-Sumbit'>{msg}</p>
+            <p className='message'>{msg}</p>
           </form>
         </div>
       </div>
-      <button className='backtohome' onClick={()=>navigate("/")}>Back to Home</button>
+      <button className='sell-backtohome' onClick={()=>navigate("/")}>Back to Home</button>
     </div>
   );
 }

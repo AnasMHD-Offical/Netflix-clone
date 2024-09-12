@@ -69,17 +69,17 @@
     text-align: center;
     font-weight: 500;
 }
-.backtohome{
-    margin-top: 20px;
+.Login-backtohome{
+    margin-top: 60px;
     font-size: 1rem;
     background: #fff;
     color: #002f34;
-    padding: .4rem;
+    padding: .5rem;
     border: none;
     border-radius: .3rem;
     cursor: pointer;
 }
-.backtohome:hover{
+.Login-backtohome:hover{
     border: 1px solid #002f34;
 }
 .login-error{

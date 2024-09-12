@@ -74,7 +74,7 @@
   background-color: #002f34;
   color: #f8f9fa;
 }
-.Go-Sumbit {
+.message {
   text-decoration: none;
   color: green;
   filter: drop-shadow(0px 0px 0.5px green);
@@ -139,7 +139,17 @@
   border: 0.075rem solid #ddd;
   border-radius: 0 0.25rem 0.25rem 0;
 }
-.backtohome {
+.sell-backtohome {
   margin-left: 44rem;
   margin-bottom: 1rem;
+  background: #fff;
+  color: #002f34;
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
 }
+.sell-backtohome:hover {
+    border: 1px solid #002f34;
+  }

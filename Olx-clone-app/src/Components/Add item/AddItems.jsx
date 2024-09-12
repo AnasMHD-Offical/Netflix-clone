@@ -17,7 +17,7 @@ function AddItems({productName,category,imageUrl,price,placeholder,location}){
                   <div className={`poster-placeholder ${classdefine}`}>
                     <img src={imageUrl} alt="" />
                   </div>
-                  <div className={`price-placeholder ${classdefine}`}>$ {price}</div>
+                  <div className={`price-placeholder ${classdefine}`}>₹ {price}</div>
                   <div className={`product-placeholder ${classdefine}`}>{productName}</div>
                   <div className='footr '>
                       <div className={`location-placeholder ${classdefine}`}>{location}</div>

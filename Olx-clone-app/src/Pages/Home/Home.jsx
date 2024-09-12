@@ -15,7 +15,7 @@ function Home() {
   useEffect(() => {
     // Set placeholders only once when the component mounts
     let _list = [];
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 16; i++) {
       _list.push(<AddItems key={i} placeholder={true} />);
     }
     setList(_list);
@@ -25,26 +25,26 @@ function Home() {
       try {
         const querySnapshot = await getDocs(collection(db, "sell_items"));
         const sellItemsData = querySnapshot.docs.map((doc) => doc.data());
-        setSellItems(sellItemsData); // Update sell items
-        setLoading(false); // Stop loading after data is fetched
+        setSellItems(sellItemsData);
+        setLoading(false); 
       } catch (error) {
         console.error("Error fetching sell items: ", error);
-        setLoading(false); // Stop loading even if there's an error
+        setLoading(false); 
       }
     };
 
     fetchSellItems();
-  }, []); // Empty dependency array means this useEffect runs once after the initial render
+  }, []); 
 
-  console.log(sellItems); // Check if the fetched data is correct
+  console.log(sellItems); 
 
   return (
     <>
       <div className="home-page">
         <Navbar />
         <div className="products-display-container">
+          
           <div className="Add-items-container">
-            {/* Conditionally render placeholders or actual items */}
             {loading
               ? list 
               : sellItems.map((item, index) => (

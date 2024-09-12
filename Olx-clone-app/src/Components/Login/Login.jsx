@@ -48,8 +48,8 @@ function Login() {
                 <p className='login-error'>{error}</p>
                 <Link className='Go-Sumbit' to={"/signup"}>Create new Account</Link>
             </form>
+            <button className='Login-backtohome' onClick={()=>navigate("/")}>Back to Home</button>
         </div>
-            <button className='backtohome' onClick={()=>navigate("/")}>Back to Home</button>
         <Context.Provider value={userLogined}>
            {display && < Navbar/>}
         </Context.Provider>

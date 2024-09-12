@@ -58,7 +58,7 @@ function Signup() {
                 <p className='Go-Sumbit'>Already have an account? <Link to={"/login"} className='Go-login'>Login</Link></p>
             </form>
         </div>
-        <button className='backtohome' onClick={()=>navigate("/")}>Back to Home</button>
+        <button className='Signup-backtohome' onClick={()=>navigate("/")}>Back to Home</button>
     </div>
     </>
   )
