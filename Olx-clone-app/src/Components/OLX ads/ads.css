@@ -1,53 +1,65 @@
-.Ads-container{
-    display: flex;
-    /* border: 1px solid #ccc; */
-    max-height: 198px;
-    margin-bottom: 10px;
-    background-color: #f8f9fa;
-    padding: 0rem 10rem;
-    gap: 1rem;
+.Ads-container {
+  display: flex;
+  /* border: 1px solid #ccc; */
+  max-height: 198px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  padding: 0rem 10rem;
+  gap: 1rem;
 }
-.Ads-content-container{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 1rem;
-    color: #002f34;
+.Ads-content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  color: #002f34;
 }
-.Ads-img{
+.Ads-img {
+}
+.Ads-title {
+  font-size: 2rem;
+}
+.Ads-text {
+  font-size: 1.1rem;
+}
+.Ads-divider {
+  height: 8rem;
+  width: 0.1rem;
+  background-color: #ccc;
+  margin-top: 2rem;
+}
+.Ads-promo-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid; */
+  justify-content: center;
+  padding: 0rem 1rem;
+  gap: 1.3rem;
+}
+.Ads-promo-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #002f34;
+}
+.Ads-promo-img-container {
+  display: flex;
+  gap: 0.5rem;
+  width: 344px;
+}
+.Ads-promo-img {
+  width: 137px;
+  height: 38px;
+}
 
-}
-.Ads-title{
-    font-size: 2rem;
-}
-.Ads-text{
-    font-size: 1.1rem;
-}
-.Ads-divider{
-    height: 8rem;
-    width: .1rem;
-    background-color: #ccc;
-    margin-top: 2rem;
-}   
-.Ads-promo-container{
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid; */
-    justify-content: center;
-    padding: 0rem 1rem;
-    gap: 1.3rem;
+/* 
+    const Context  = createContext()
 
-}
-.Ads-promo-text{
-    font-size: 1rem;
-    font-weight: 600;
-    color: #002f34;
-}
-.Ads-promo-img-container{
-    display: flex;
-    gap: .5rem;
-    width: 344px;
-}
-.Ads-promo-img{
-    width: 137px;
-    height: 38px;
-}
+    <Context.Provider value={data}>
+    <App/>
+    <Context.Provider>
+
+
+    import Context from "Mycomponent"
+
+    const value = useContext(Context)
+
+*/
